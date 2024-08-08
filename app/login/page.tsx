@@ -6,6 +6,7 @@ import { auth, firestore } from "@/firebase/firebase"
 import {doc, getDoc, setDoc} from 'firebase/firestore'
 import Link from "next/link"
 import { toast, ToastContainer } from "react-toastify"
+import Header from "../components/Header"
 
 const  LoginPage = () => {
     const [email, setEmail] = useState("");
@@ -51,33 +52,7 @@ const  LoginPage = () => {
 
     return(
         <>
-        <section className="bg-white text-white">
-        <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1
-              className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
-            >
-              Join Us and Breathe Easy with Eco-Friendly Cooling.
-            </h1>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                className="block w-full border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-black rounded-xl hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                href="#"
-              >
-                Get Started
-              </a>
-
-              <a
-                className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-black hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-                href="#"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+        <Header />
         <div className="justify-center bg-white items-center relative w-[fit-content] rounded-2xl p-3 flex flex-col mx-auto">
             <h2 className="text-4xl font-extrabold font-serif text-black  mb-10">Sign In</h2>
             <form className="space-y-4 p-5 rounded-xl" onSubmit={handleLogin}>
